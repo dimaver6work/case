@@ -1,0 +1,24 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 500px;
+    gap: 20px;
+
+    .contact {
+        display: flex;
+        align-items: center;
+
+        a {
+            color: #eda90d;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 28px;
+            margin-left: 15px;
+        }
+        a:visited {
+            color: #eda90d;
+        }
+    }
+}

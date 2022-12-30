@@ -1,0 +1,44 @@
+.weapon {
+    width: 185px;
+    height: 80px;
+
+    background: linear-gradient(180deg, rgba(237, 169, 13, 0.09) 0%, #eda90d 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+        color: #ffffff;
+        margin-top: 40px;
+        margin-left: 10px;
+        h3 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .weapon_image {
+        position: relative;
+        .background_weapon {
+            position: absolute;
+            right: 10px;
+            top: 30px;
+            z-index: -1;
+            width: 61px;
+            height: 41px;
+            background: #ffffff;
+            filter: blur(2px);
+            border-radius: 20px;
+        }
+
+        img {
+            filter: none;
+
+            width: 105px;
+            height: 105px;
+        }
+    }
+}

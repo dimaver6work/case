@@ -1,0 +1,65 @@
+.agreement {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 400px;
+    .top {
+        font-weight: 700;
+        font-size: 32px;
+        margin-bottom: 40px;
+        display: flex;
+
+        .name {
+            color: #eda90d;
+            margin-right: 20px;
+        }
+        .link {
+            color: white;
+            cursor: pointer;
+        }
+        .link:hover {
+            color: #eda90d;
+        }
+    }
+    .text {
+        color: white;
+
+        line-height: 33px;
+
+        color: #ffffff;
+        text-align: start;
+
+        .gold {
+            font-size: 28px;
+            font-weight: 600;
+            color: #eda90d;
+        }
+        .bold {
+            font-size: 25px;
+            font-weight: 500;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            display: inline;
+        }
+    }
+
+    .mobile {
+        display: none;
+        white-space: pre-wrap;
+        .content {
+            padding: 15px 6px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .desctop {
+            display: none;
+        }
+        .mobile {
+            display: flex;
+        }
+    }
+}

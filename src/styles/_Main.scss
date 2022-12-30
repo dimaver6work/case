@@ -1,0 +1,37 @@
+.mainConteiner {
+    max-width: 70%;
+    margin: 0 auto;
+
+    .main {
+        h2 {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
+            text-align: center;
+            color: #ffffff;
+
+            text-shadow: 0px 4px 25px #eda90d;
+        }
+        .weapons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 80px;
+        }
+        .caseCollection {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 100px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .mainConteiner {
+        max-width: 1100px;
+    }
+}

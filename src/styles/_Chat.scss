@@ -1,0 +1,95 @@
+.chat {
+    position: fixed;
+    right: 10px;
+    top: 700px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eda90d;
+    border-radius: 10px;
+    width: 70px;
+    height: 50px;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+.closeButton {
+    width: 93px;
+    height: 32px;
+    background: #eda90d;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -100px;
+    cursor: pointer;
+}
+.modalConteiner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+
+    .modalTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 7px;
+        margin-bottom: 36px;
+        .right {
+            display: flex;
+        }
+    }
+    .input {
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        input {
+            position: relative;
+            padding: 26px;
+            background-color: #201f26;
+            width: 350px;
+            height: 68px;
+            border-radius: 10px;
+            color: white;
+        }
+        img {
+            position: absolute;
+            right: 15px;
+            margin-top: 15px;
+        }
+    }
+    .texting {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+.chatContent {
+    position: fixed;
+    right: 0px;
+    top: 150px;
+
+    width: 360px;
+    height: 600px;
+    color: white;
+    border: 3px solid #eda90d;
+    background: #141318;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .closeButton {
+        position: absolute;
+        left: -100px;
+        bottom: 0px;
+    }
+}

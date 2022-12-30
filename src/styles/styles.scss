@@ -1,0 +1,30 @@
+@import './null';
+@import './Main';
+
+@import './Navbar';
+@import './Profile';
+@import './Weapon';
+@import './Case';
+@import './Footer';
+@import './SidebarL';
+@import './Chat';
+@import './Massage';
+@import './Games';
+@import './Error';
+@import './Help';
+@import './Bonuses';
+@import './NavProfile';
+@import './Contacts';
+@import './Agreement';
+@import './Politic';
+
+head,
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+    // display: flex;
+    // justify-content: center;
+    overflow-x: hidden;
+    // position: relative;
+    height: 100%;
+}
