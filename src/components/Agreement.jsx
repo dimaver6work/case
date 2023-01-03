@@ -99,7 +99,6 @@ let items = [
 ];
 
 const Agreement = () => {
-  const [open, setOpen] = useState(false);
   const [activeButton, setActiveButton] = useState(null);
   return (
     <div className="agreement">

@@ -11,15 +11,20 @@ import Bonuses from "./components/Bonuses";
 import Contacts from "./components/Contacts";
 import Agreement from "./components/Agreement";
 import Politic from "./components/Politic";
+import ModalSignIn from "./components/ModalSignIn";
 
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 function App() {
+  const [modalActive, setModalActive] = useState(false);
   return (
     <Router>
+      {/* <Provider store={store}> */}
       <div className="App">
-        <Navbar />
+        <Navbar setModalActive={setModalActive} />
         <SidebarL />
         <Chat />
         <Routes>
@@ -33,7 +38,14 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
+        {modalActive && (
+          <ModalSignIn
+            modalActive={modalActive}
+            setModalActive={setModalActive}
+          />
+        )}
       </div>
+      {/* </Provider> */}
     </Router>
   );
 }

@@ -12,6 +12,12 @@ const Main = () => {
           <Weapon />
           <Weapon />
           <Weapon />
+          <Weapon />
+          <Weapon />
+          <Weapon />
+          <Weapon />
+          <Weapon />
+          <Weapon />
         </div>
         <h2>Коллекция кейсов</h2>
         <div className="caseCollection">

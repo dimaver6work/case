@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import Profile from "./Profile";
+import SignButton from "./SignButton";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setModalActive }) => {
+  const [inSystem, setInSystem] = useState(false);
+
   return (
     <div className="navConteiner">
       <div className="navbar">
@@ -26,8 +29,14 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="navR">
-          <Profile />
-          <button>Выйти</button>
+          {inSystem ? (
+            <>
+              <Profile />
+              <button>Выйти</button>
+            </>
+          ) : (
+            <SignButton setModalActive={setModalActive} />
+          )}
         </div>
       </div>
     </div>

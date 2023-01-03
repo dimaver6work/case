@@ -14,11 +14,21 @@
         }
         .weapons {
             display: flex;
-            flex-wrap: wrap;
+            overflow-y: hidden;
+            overflow-x: scroll;
             gap: 20px;
             align-items: center;
             justify-content: center;
             margin-bottom: 80px;
+        }
+        .weapons::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Скрываем scrollbar для IE, Edge и Firefox */
+        .weapons {
+            -ms-overflow-style: none; /* IE и Edge */
+            scrollbar-width: none; /* Firefox */
         }
         .caseCollection {
             display: flex;

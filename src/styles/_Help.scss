@@ -6,7 +6,6 @@
 
     .heading {
         max-width: 1195px;
-        height: 80px;
         color: white;
         display: flex;
         align-items: center;
@@ -14,7 +13,7 @@
         border-radius: 10px;
 
         color: #ffffff;
-        padding: 30px;
+        padding: 20px;
         margin-bottom: 25px;
 
         background: linear-gradient(90deg, rgba(237, 169, 13, 0.37) 0%, rgba(20, 19, 24, 0) 101.38%);
@@ -37,7 +36,6 @@
         .right {
             font-weight: 700;
             font-size: 30px;
-            line-height: 35px;
 
             color: #ffffff;
         }
