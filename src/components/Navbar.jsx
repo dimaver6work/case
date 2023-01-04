@@ -4,7 +4,7 @@ import Profile from "./Profile";
 import SignButton from "./SignButton";
 import { NavLink } from "react-router-dom";
 
-const Navbar = ({ setModalActive }) => {
+const Navbar = ({ setModalSignInActive }) => {
   const [inSystem, setInSystem] = useState(false);
 
   return (
@@ -35,7 +35,7 @@ const Navbar = ({ setModalActive }) => {
               <button>Выйти</button>
             </>
           ) : (
-            <SignButton setModalActive={setModalActive} />
+            <SignButton setModalSignInActive={setModalSignInActive} />
           )}
         </div>
       </div>

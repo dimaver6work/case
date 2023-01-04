@@ -14,14 +14,19 @@ import * as Yup from "yup";
 import x from "../assets/x.svg";
 import vk from "../assets/signVk.svg";
 import google from "../assets/signGoogle.svg";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-const ModalSignIn = ({ modalActive, setModalActive }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const ModalSignIn = ({
+  modalSignInActive,
+  setModalSignInActive,
+  setModalSignUpActive,
+}) => {
   function closeModal() {
-    setModalActive(false);
+    setModalSignInActive(false);
   }
+  let changeToSingUp = () => {
+    closeModal();
+    setModalSignUpActive(true);
+  };
   const initialValues = {
     email: "",
     passwod: "",
@@ -29,7 +34,7 @@ const ModalSignIn = ({ modalActive, setModalActive }) => {
   };
   return (
     <Modal
-      isOpen={modalActive}
+      isOpen={modalSignInActive}
       onRequestClose={closeModal}
       style={customStylesModal}
       ariaHideApp={false}
@@ -56,7 +61,8 @@ const ModalSignIn = ({ modalActive, setModalActive }) => {
           {({ values }) => (
             <Form className="form">
               <p>
-                У вас еще нет аккаунта?<a href=""> Регистрация</a>{" "}
+                У вас еще нет аккаунта?
+                <span onClick={() => changeToSingUp()}> Регистрация</span>{" "}
               </p>
               <label className="label" htmlFor={`email`}></label>
               <Field
@@ -64,7 +70,6 @@ const ModalSignIn = ({ modalActive, setModalActive }) => {
                 placeholder="Введите e-mail"
                 type="email"
                 name="email"
-                // onChange={(e) => setEmail(e.target.value)}
               />
               <ErrorMessage className="error" name="email" component="div" />
               <label className="label" htmlFor={`password`}></label>
@@ -73,7 +78,6 @@ const ModalSignIn = ({ modalActive, setModalActive }) => {
                 placeholder="Введите пароль"
                 type="text"
                 name="password"
-                // onChange={(e) => setPassword(e.target.value)}
               />
               <ErrorMessage className="error" name="password" component="div" />
               <p>

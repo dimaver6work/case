@@ -17,14 +17,16 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import ModalSignUp from "./components/ModalSignUp";
 
 function App() {
-  const [modalActive, setModalActive] = useState(false);
+  const [modalSignInActive, setModalSignInActive] = useState(false);
+  const [modalSignUpActive, setModalSignUpActive] = useState(false);
   return (
     <Router>
       {/* <Provider store={store}> */}
       <div className="App">
-        <Navbar setModalActive={setModalActive} />
+        <Navbar setModalSignInActive={setModalSignInActive} />
         <SidebarL />
         <Chat />
         <Routes>
@@ -38,10 +40,18 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
-        {modalActive && (
+        {modalSignInActive && (
           <ModalSignIn
-            modalActive={modalActive}
-            setModalActive={setModalActive}
+            modalSignInActive={modalSignInActive}
+            setModalSignInActive={setModalSignInActive}
+            setModalSignUpActive={setModalSignUpActive}
+          />
+        )}{" "}
+        {modalSignUpActive && (
+          <ModalSignUp
+            modalSignUpActive={modalSignUpActive}
+            setModalSignUpActive={setModalSignUpActive}
+            setModalSignInActive={setModalSignInActive}
           />
         )}
       </div>
