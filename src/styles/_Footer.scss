@@ -4,6 +4,8 @@
     background-color: #141318;
     color: white;
     justify-content: center;
+    padding-bottom: 30px;
+
     .footerRefs {
         display: flex;
         gap: 32px;
@@ -26,7 +28,6 @@
         align-self: center;
         justify-self: center;
         gap: 30px;
-        margin-bottom: 20px;
         background-color: #141318;
     }
 }

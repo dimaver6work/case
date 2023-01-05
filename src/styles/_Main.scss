@@ -1,11 +1,19 @@
 // .mainConteiner {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
+// display: flex;
+// align-items: center;
+// justify-content: center;
 //     flex-direction: column;
 //     margin-top: 125px;
 
 .Main {
+    padding: 40px 0;
+    max-width: 1300px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     h2 {
         font-weight: 700;
         @include adaptiv-font(32, 22);

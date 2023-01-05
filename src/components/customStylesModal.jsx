@@ -1,7 +1,7 @@
 export const customStylesModal = {
   content: {
-    top: "50%",
-    left: "50%",
+    top: "45%",
+    left: "45%",
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
@@ -10,6 +10,7 @@ export const customStylesModal = {
     zIndex: "1",
     borderRadius: "10px",
     border: "none",
+    scale: "0.7",
   },
   overlay: {
     background: "none",
