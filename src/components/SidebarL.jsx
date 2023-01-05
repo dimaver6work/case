@@ -4,7 +4,7 @@ import vk from "../assets/vk.svg";
 
 const SidebarL = () => {
   return (
-    <div className="sidebarL">
+    <div className="SidebarL">
       <img src={vk} alt="vk" />
       <img src={tg} alt="tg" />
     </div>

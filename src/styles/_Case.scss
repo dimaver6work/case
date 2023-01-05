@@ -5,19 +5,21 @@
     justify-content: center;
 
     img {
-        width: 313px;
-        height: 254px;
+        width: 280px;
+        height: 270px;
     }
 
-    @media (min-width: 1200px) and (max-width: 768px) {
+    @media (max-width: 1200px) and (min-width: 768px) {
         img {
             width: 272px;
             height: 221px;
         }
     }
-    @media (min-width: 768px) and (max-width: 320px) {
-        width: 163px;
-        height: 130px;
+    @media (max-width: 768px) and (min-width: 320px) {
+        img {
+            width: 163px;
+            height: 130px;
+        }
     }
 
     h3 {

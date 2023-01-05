@@ -29,16 +29,18 @@ function App() {
         <Navbar setModalSignInActive={setModalSignInActive} />
         <SidebarL />
         <Chat />
-        <Routes>
-          <Route exact path="/" element={<Main />} />
-          <Route path="/games" element={<Games />} />
-          <Route path="/help" element={<Help />} />
-          <Route path="/bonuses" element={<Bonuses />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/agreement" element={<Agreement />} />
-          <Route path="/Politic" element={<Politic />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+        <div className="Main">
+          <Routes>
+            <Route exact path="/" element={<Main />} />
+            <Route path="/games" element={<Games />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/bonuses" element={<Bonuses />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/agreement" element={<Agreement />} />
+            <Route path="/Politic" element={<Politic />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </div>
         <Footer />
         {modalSignInActive && (
           <ModalSignIn
@@ -55,6 +57,7 @@ function App() {
           />
         )}
       </div>
+
       {/* </Provider> */}
     </Router>
   );
